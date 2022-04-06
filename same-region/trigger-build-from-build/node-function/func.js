@@ -30,5 +30,5 @@ fdk.handle(async function(input){
   })
   console.log("CREATE BUILD RUN RESPONSE", JSON.stringify(buildRunResponse));
 
-  return {'message': 'Hello'}
+  return buildRunResponse;
 })
