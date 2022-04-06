@@ -2,8 +2,8 @@ const fdk = require('@fnproject/fdk');
 const common = require("oci-common");
 const devops = require("oci-devops");
 
-const buildPipelineId = "ocid1.devopsbuildpipeline.oc1.ap-hyderabad-1.amaaaaaak56z2vqazjgskjqjjdjqowrdn3d6eatvhsixvhzb2ozoje2qxh7q"
-const displayNamePrefixForNewRun = "AutoTriggeredCascade2_";
+const buildPipelineId = "<target-build-pipeline-ocid>"
+const displayNamePrefixForNewRun = "AutoTriggeredCascadedPipeline_";
 
 fdk.handle(async function(input){
   const provider = common.ResourcePrincipalAuthenticationDetailsProvider.builder();
