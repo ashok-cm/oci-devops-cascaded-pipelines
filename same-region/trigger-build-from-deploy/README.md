@@ -49,8 +49,8 @@ Configure Source as below
 ![Service Connector Source Config](images/service-connector-source-config.png)
 
 * Choose Compartment, Log Group, Logs of your DevOps Project.
-* set `data.buildPipelineId` to the previous pipeline OCID as above.
-* set `data.message` to the last successful unique log message like `Completed Build stage.`
+* set `data.deployPipelineId` to the previous pipeline OCID as above.
+* set `data.message` to the last successful unique log message like `All stages complete.`
 
 **Step 4:**
 
