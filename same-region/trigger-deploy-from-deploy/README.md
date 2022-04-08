@@ -4,7 +4,7 @@
 
 ### Prerequisites
 * One deploy pipeline
-* One build pipeline (triggered after the above deploy pipeline)
+* Another deploy pipeline (triggered after the above deploy pipeline)
 
 #### 1. Deploy Function
 **Step 1:**
@@ -16,14 +16,14 @@ $ git clone https://github.com/oracle-cloud-infra/oci-devops-cascaded-pipelines.
 **Step 2:**
 Change to function directory.
 ```
-$ cd oci-devops-cascaded-pipelines/same-region/trigger-build-from-deploy/node-function
+$ cd oci-devops-cascaded-pipelines/same-region/trigger-deploy-from-deploy/node-function
 ```
 
 **Step 3:**
-In `func.js`, update `buildPipelineId` and `displayNamePrefixForNewRun` with appropriate values as below.
+In `func.js`, update `deployPipelineId` and `displayNamePrefixForNewRun` with appropriate values as below.
 
 ```
-const buildPipelineId = "<target-build-pipeline-ocid>"
+const deployPipelineId = "<target-deploy-pipeline-ocid>"
 const displayNamePrefixForNewRun = "AutoTriggeredCascadedPipeline_";
 ```
 
@@ -54,7 +54,7 @@ Configure Source as below
 
 **Step 4:**
 
-Configure Target with `Function Application` and `Function` as `trigger-build-pipeline-from-deploy-pipeline` as below
+Configure Target with `Function Application` and `Function` as `trigger-deploy-pipeline-from-deploy-pipeline` as below
 
 ![Service Connector Target Config](images/service-connector-target-config.png)
 
